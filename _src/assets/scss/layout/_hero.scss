@@ -1,8 +1,13 @@
 .hero {
   min-height: 400px;
-  width: 100vw;
   background-image: url("../images/hero_bg/rectangle-3.jpg");
   background-size: cover;
+}
+.logotipo__container {
+  width: 152px;
+  .logotipo__tidal {
+    width: 100%;
+  }
 }
 .hero__info__container{
   width: 90%;
@@ -15,17 +20,51 @@
   align-items: center;
   padding: 35px 0;
   text-align: center;
+  @media screen and (min-width: 768px) {
+    width: 80%;
+    max-width: 1020px;
+    padding: 50px 0;
+  }
 }
 .main__claim {
   font-size: 30px;
   line-height: 32px;
+  font-family: $secondary-font;
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 44px;
+  }
+}
+.sub__claim, .call__to__action{
+  font-size: 20px;
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+  }
+}
+.call__to__action {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+.bold {
+  font-family: $font-bold;
 }
 .primary__button {
   width: 100%;
   background: $primary-color;
   padding: 10px;
+  font-size: 18px;
   color: $font-primary-color;
-}
-.prueba {
-  font-family: 'Vodafone';
+  @media screen and (min-width: 768px) {
+    width: 10%;
+    max-width: 90px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 6%;
+  }
 }

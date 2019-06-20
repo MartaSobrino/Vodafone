@@ -1,6 +1,18 @@
 @font-face {
-  font-family: 'Vodafone';
+  font-family: 'Vodafone Regular';
   font-weight: normal;
   font-style: normal;
-  src: url("./fonts/VodafoneRg.woff") format("woff");
+  src: url("../fonts/VodafoneRg.woff") format("woff");
+}
+@font-face {
+  font-family: 'Vodafone Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/vodafonergbd-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: 'Vodafone LT Regular';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/VodafoneLt-Regular.woff") format("woff");
 }

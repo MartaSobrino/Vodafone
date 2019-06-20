@@ -28,7 +28,7 @@
     "dist": "docs/assets/images/"
   },
   "fonts": {
-    "src": "_src/assets/fonts/**/*.{woff}",
+    "src": "_src/assets/fonts/**/*.woff",
     "dest": "public/assets/fonts",
     "dist": "docs/assets/fonts"
   },
