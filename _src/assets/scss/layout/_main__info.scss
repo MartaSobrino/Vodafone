@@ -1,7 +1,7 @@
 //Breadcumbs
 .breadcums__container--hidden {
   display: none;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     display: block;
     background: $secondary-background-color;
   }
@@ -12,6 +12,15 @@
   margin: 0 auto;
   padding: 20px 0;
   display: flex;
+}
+.breadcum__item::after {
+  content: url('../images/breadcum__arrow.png');
+  display:block;
+  float: right;
+  margin: 0 10px;
+}
+.breadcum__item:last-child::after {
+  display: none;
 }
 //Main information
 .main__body {
@@ -64,6 +73,11 @@
     width: 344px;
   }
 }
+.slide{
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
 .item__img {
   width: 100%;
 }
@@ -81,5 +95,9 @@
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
+}
+@keyframes slide {
+    0% {margin-left: 0%;}
+    100% {margin-left: -100%;}
 }
 

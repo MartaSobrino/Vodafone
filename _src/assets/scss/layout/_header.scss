@@ -1,4 +1,14 @@
-.page__header {
+.navbar {
   height: 40px;
-  background-color: lightblue;
+  background-image: url("../images/nav__mobile.jpg");
+  background-size: cover;
+  @media screen and (min-width: 768px){
+    height: 75px;
+    background-image: url("../images/nav__tablet.jpg");
+    background-size: contain;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 100px;
+    background-image: url("../images/nav__desktop.jpg");
+  }
 }
