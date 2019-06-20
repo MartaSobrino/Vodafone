@@ -72,8 +72,6 @@ gulp.task('scripts', function(done){
   done();
 });
 
-
-
 // >> Copy image files
 gulp.task('images', function(done) {
   gulp.src(config.images.src)
@@ -162,7 +160,13 @@ gulp.task('images-dist', function(done) {
   done();
 });
 
-
+// >> Copy image files
+gulp.task('fonts-dist', function(done) {
+  gulp.src(config.fonts.src)
+    .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
+    .pipe(gulp.dest(config.fonts.dist));
+  done();
+});
 
 // >> Copy icon files
 gulp.task('icons-dist', function(done) {
@@ -175,7 +179,7 @@ gulp.task('icons-dist', function(done) {
 
 
 // > Watchers + BrowserSync server
-gulp.task('default', gulp.series(['clean','html', 'styles','scripts', 'images', 'icons'], function(done) {
+gulp.task('default', gulp.series(['clean','html', 'styles','scripts', 'images', 'fonts',  'icons'], function(done) {
   browserSync.init({
     server : {
       baseDir: './public/'
@@ -183,7 +187,7 @@ gulp.task('default', gulp.series(['clean','html', 'styles','scripts', 'images', 
   });
   gulp.watch(config.watch.html, gulp.series(['html', 'bs-reload']));
   gulp.watch(config.images.src, gulp.series(['images', 'bs-reload']));
-  gulp.watch(config.images.src, gulp.series(['fonts', 'bs-reload']));
+  gulp.watch(config.fonts.src, gulp.series(['fonts', 'bs-reload']));
   gulp.watch(config.icons.src, gulp.series(['icons', 'bs-reload']));
   gulp.watch(config.scss.src, gulp.series('styles'));
   gulp.watch(config.js.src, gulp.series(['scripts', 'bs-reload']));
