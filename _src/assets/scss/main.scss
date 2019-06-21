@@ -1,14 +1,9 @@
-//Components
 @import 'components/typography';
 @import 'components/variables';
-
-//Core
 @import 'core/settings';
-
-//Layout
+@import 'vendor/slick';
 @import 'layout/header';
 @import 'layout/hero';
 @import 'layout/main__info';
 @import 'layout/secondary__info';
-
 

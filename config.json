@@ -1,4 +1,9 @@
 {
+  "jslibs": {
+    "src": "_src/assets/jslibs/**/*.js",
+    "dest": "public/assets/js/",
+    "dist": "docs/assets/js/"
+  },
   "icons": {
     "src": "_src/assets/icons/*.*",
     "dest": "public/",

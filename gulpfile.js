@@ -80,6 +80,15 @@ gulp.task('images', function(done) {
   done();
 });
 
+
+// >> Copy js libs files
+gulp.task('jslibs', function(done) {
+  gulp.src(config.jslibs.src)
+    .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
+    .pipe(gulp.dest(config.jslibs.dest));
+  done();
+});
+
 // >> Copy fonts files
 gulp.task('fonts', function(done) {
   gulp.src(config.fonts.src)
@@ -115,6 +124,14 @@ gulp.task('html-dist', function(done) {
   done();
 });
 
+
+// >> Copy js libs files (dist)
+gulp.task('jslibs-dist', function(done) {
+  gulp.src(config.jslibs.src)
+    .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
+    .pipe(gulp.dest(config.jslibs.dist));
+  done();
+});
 
 
 // >> Process SCSS files (compressed + autoprefixer)
@@ -179,7 +196,7 @@ gulp.task('icons-dist', function(done) {
 
 
 // > Watchers + BrowserSync server
-gulp.task('default', gulp.series(['clean','html', 'styles','scripts', 'images', 'fonts',  'icons'], function(done) {
+gulp.task('default', gulp.series(['clean','html', 'styles','scripts', 'images', 'fonts',  'icons', 'jslibs'], function(done) {
   browserSync.init({
     server : {
       baseDir: './public/'
@@ -197,7 +214,7 @@ gulp.task('default', gulp.series(['clean','html', 'styles','scripts', 'images', 
 
 
 // > Build a production-ready version of your proyect
-gulp.task('docs', gulp.series(['clean-dist','html-dist','styles-dist','scripts-dist', 'images-dist', 'fonts-dist', 'icons-dist'], function(done) {
+gulp.task('docs', gulp.series(['clean-dist','html-dist','styles-dist','scripts-dist', 'images-dist', 'fonts-dist', 'icons-dist', 'jslibs-dist'], function(done) {
   console.log('🦄 Build OK!');
   done();
 }));

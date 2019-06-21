@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   @media screen and (min-width: 768px){
     height: 75px;
+    background-size: contain;
     background-image: url("../images/nav__tablet.jpg");
   }
   @media screen and (min-width: 1280px) {
@@ -15,5 +16,6 @@
     background-image: url("../images/nav__desktop.jpg");
     max-width: 1300px;
     margin: 0 auto;
+    background-size: cover;
   }
 }
