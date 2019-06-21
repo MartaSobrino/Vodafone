@@ -18,7 +18,8 @@
 		"gulp-sourcemaps": "*",
 		"gulp-uglify-es": "^1.0.4",
 		"gulp-zip": "*",
-		"run-sequence": "*"
+		"run-sequence": "*",
+		"slick-carousel": "^1.8.1"
 	},
 	"scripts": {
 		"start": "gulp",

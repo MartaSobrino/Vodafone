@@ -5,10 +5,12 @@
   background-repeat: no-repeat;
   @media screen and (min-width: 768px){
     height: 75px;
+    background-size: contain;
     background-image: url("../images/nav__tablet.jpg");
   }
   @media screen and (min-width: 1280px) {
     height: 100px;
+    background-size: cover;
     background-image: url("../images/nav__desktop.jpg");
   }
 }
